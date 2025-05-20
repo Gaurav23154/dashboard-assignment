@@ -1,12 +1,92 @@
-# React + Vite
+# Dashboard UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive dashboard interface built with React and Vite, featuring a beautiful and intuitive user experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 Modern UI with Tailwind CSS and shadcn/ui components
+- 📊 Interactive data visualization with Recharts
+- 🎯 Drag and drop functionality with dnd-kit
+- 🌓 Dark/Light mode support
+- 📱 Fully responsive design
+- 🔄 Real-time data updates
+- 🎭 Rich component library with Radix UI primitives
+- 📝 Form handling and validation with Zod
+- 🔔 Toast notifications with Sonner
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Framework**: React 19
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui, Radix UI
+- **Charts**: Recharts
+- **Drag & Drop**: dnd-kit
+- **Form Validation**: Zod
+- **Routing**: React Router DOM
+- **Icons**: Tabler Icons, Lucide React
+- **Notifications**: Sonner
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (Latest LTS version recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd dashboard-ui
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open your browser and visit `http://localhost:5173`
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```
+src/
+├── app/          # Application configuration and setup
+├── assets/       # Static assets (images, fonts, etc.)
+├── components/   # Reusable UI components
+├── data/         # Mock data and data utilities
+├── hooks/        # Custom React hooks
+├── lib/          # Utility functions and configurations
+├── pages/        # Page components and routes
+└── App.jsx       # Root component
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
