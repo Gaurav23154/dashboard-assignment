@@ -118,7 +118,7 @@ export default function ArticlesPage() {
         </Tabs>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col items-center gap-4 w-full">
         <Input placeholder="Search for title & keywords..." className="w-80" />
         <div className="flex items-center gap-4">
           <select className="border rounded-md px-3 py-2 text-sm">
