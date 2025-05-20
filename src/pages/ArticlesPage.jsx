@@ -105,21 +105,21 @@ const articles = [
 
 export default function ArticlesPage() {
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold text-center">Articles</h1>
-        <Tabs defaultValue="generated" className="w-full mt-4 flex flex-col items-center">
-          <TabsList className="grid grid-cols-4 w-auto mx-auto">
-            <TabsTrigger value="generated">Generated Articles</TabsTrigger>
-            <TabsTrigger value="published">Published Articles</TabsTrigger>
-            <TabsTrigger value="scheduled">Scheduled Articles</TabsTrigger>
-            <TabsTrigger value="archived">Archived Articles</TabsTrigger>
+    <div className="space-y-8">
+      <div className="flex flex-col items-center justify-center w-full">
+        <h1 className="text-4xl font-extrabold text-center mb-4">Articles</h1>
+        <Tabs defaultValue="generated" className="w-full flex flex-col items-center">
+          <TabsList className="flex gap-2 bg-transparent p-0 border-0">
+            <TabsTrigger value="generated" className="rounded-full px-6 py-2 font-semibold text-base data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=inactive]:bg-white data-[state=inactive]:text-black border border-gray-300">Generated Articles</TabsTrigger>
+            <TabsTrigger value="published" className="rounded-full px-6 py-2 font-semibold text-base data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=inactive]:bg-white data-[state=inactive]:text-black border border-gray-300">Published Articles</TabsTrigger>
+            <TabsTrigger value="scheduled" className="rounded-full px-6 py-2 font-semibold text-base data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=inactive]:bg-white data-[state=inactive]:text-black border border-gray-300">Scheduled Articles</TabsTrigger>
+            <TabsTrigger value="archived" className="rounded-full px-6 py-2 font-semibold text-base data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=inactive]:bg-white data-[state=inactive]:text-black border border-gray-300">Archived Articles</TabsTrigger>
           </TabsList>
         </Tabs>
       </div>
 
       <div className="flex flex-col items-center gap-4 w-full">
-        <Input placeholder="Search for title & keywords..." className="w-80" />
+        <Input placeholder="Search for Title & Keywords..." className="w-96 text-center" />
         <div className="flex items-center gap-4">
           <select className="border rounded-md px-3 py-2 text-sm">
             <option>All Status</option>
