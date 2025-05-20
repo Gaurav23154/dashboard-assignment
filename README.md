@@ -56,7 +56,7 @@ npm run dev
 yarn dev
 ```
 
-4. Open your browser and visit `http://localhost:5173`
+4. Open your browser and visit `https://dashboard-assignment-beta.vercel.app/`
 
 ### Available Scripts
 
