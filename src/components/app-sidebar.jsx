@@ -51,33 +51,36 @@ const navSections = [
 export function AppSidebar(props) {
   const [articlesOpen, setArticlesOpen] = React.useState(true);
   return (
-    <Sidebar collapsible="icon" {...props}>
-      <SidebarHeader>
-        <div className="font-bold text-2xl mb-6">abun</div>
-        <div className="flex items-center justify-between bg-muted px-3 py-2 rounded-md mb-6">
-          <span className="text-sm font-medium">amazon.com</span>
-          <ChevronDown size={16} />
+    <Sidebar collapsible="icon" className="h-screen" {...props}>
+      <SidebarHeader className="sticky top-0 bg-white z-10">
+        <div className="flex items-center gap-2 font-bold text-3xl mb-4 text-blue-700">
+          <BookOpen className="w-8 h-8 text-blue-700" />
+          abun
+        </div>
+        <div className="flex items-center justify-between bg-muted px-4 py-3 rounded-md mb-4">
+          <span className="text-base font-semibold">amazon.com</span>
+          <ChevronDown size={18} />
         </div>
       </SidebarHeader>
-      <SidebarContent>
-        <nav className="space-y-2">
+      <SidebarContent className="flex-1 overflow-y-auto">
+        <nav className="space-y-2 pb-2">
           {navSections.map((section) => (
             <div key={section.label}>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground uppercase mb-1 mt-4">
-                {section.icon && <section.icon size={16} />}
+              <div className="flex items-center gap-2 text-sm text-muted-foreground uppercase mb-1 mt-2">
+                {section.icon && <section.icon size={18} />}
                 {section.collapsible ? (
                   <button
                     className="flex-1 flex items-center gap-2 w-full text-left focus:outline-none"
                     onClick={() => setArticlesOpen((open) => !open)}
                   >
-                    <span>{section.label}</span>
-                    <ChevronDown className={`ml-1 transition-transform ${articlesOpen ? "rotate-180" : "rotate-0"}`} size={16} />
+                    <span className="font-semibold">{section.label}</span>
+                    <ChevronDown className={`ml-1 transition-transform ${articlesOpen ? "rotate-180" : "rotate-0"}`} size={18} />
                   </button>
                 ) : (
                   <NavLink
                     to={section.to}
                     className={({ isActive }) =>
-                      `flex items-center gap-2 text-sm cursor-pointer rounded-lg px-2 py-2 transition-colors
+                      `flex items-center gap-2 text-base cursor-pointer rounded-lg px-3 py-2 transition-colors
                       hover:text-blue-600 hover:bg-blue-50
                       ${isActive ? "bg-blue-100 text-blue-700 font-semibold border-l-4 border-blue-500" : ""}`
                     }
@@ -96,12 +99,12 @@ export function AppSidebar(props) {
                       key={item.label}
                       to={item.to}
                       className={({ isActive }) =>
-                        `flex items-center gap-2 text-sm cursor-pointer rounded px-2 py-2 transition-colors
+                        `flex items-center gap-2 text-base cursor-pointer rounded px-3 py-2 transition-colors
                         hover:text-blue-600 hover:bg-blue-50
                         ${isActive ? "bg-blue-100 text-blue-700 font-semibold border-l-4 border-blue-500" : ""}`
                       }
                     >
-                      <item.icon size={16} />
+                      <item.icon size={18} />
                       {item.label}
                     </NavLink>
                   ))}
@@ -111,8 +114,8 @@ export function AppSidebar(props) {
           ))}
         </nav>
       </SidebarContent>
-      <SidebarFooter>
-        <div className="text-xs text-muted-foreground mt-4">&copy; 2024 abun</div>
+      <SidebarFooter className="sticky bottom-0 bg-white border-t pt-4">
+        <div className="text-sm text-muted-foreground">&copy; 2024 abun</div>
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>

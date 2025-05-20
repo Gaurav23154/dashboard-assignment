@@ -27,35 +27,37 @@ export default function App() {
   return (
     <Router>
       <SidebarProvider>
-        <div className="flex min-h-screen bg-gray-50">
+        <div className="flex min-h-screen w-full bg-gray-50">
           <AppSidebar />
-          <div className="flex-1 flex flex-col">
+          <div className="flex-1 flex flex-col min-h-screen w-full">
             <Header />
-            <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<ArticlesPage />} />
-                <Route path="/auto-blog" element={<AutoBlogPage />} />
-                <Route path="/internal-links" element={<InternalLinksPage />} />
-                <Route path="/free-backlinks" element={<FreeBacklinksPage />} />
-                <Route path="/integrations" element={<IntegrationsPage />} />
-                <Route path="/subscription" element={<SubscriptionPage />} />
-                <Route path="/affiliate-program" element={<AffiliateProgramPage />} />
-                <Route path="/help-center" element={<HelpCenterPage />} />
-                <Route path="/updates" element={<UpdatesPage />} />
-                <Route path="/live-chat-support" element={<LiveChatSupportPage />} />
-                <Route path="/profile" element={<ProfilePage />} />
-                {/* Article subpages */}
-                <Route path="/articles/create" element={<CreateArticlePage />} />
-                <Route path="/articles/generated" element={<ArticlesPage />} />
-                <Route path="/articles/keyword-projects" element={<KeywordProjectsPage />} />
-                <Route path="/articles/ai-keyword" element={<AIKeywordPage />} />
-                <Route path="/articles/steal-competitor" element={<StealCompetitorPage />} />
-                <Route path="/articles/import-gsc" element={<ImportGSCPage />} />
-                <Route path="/articles/manual-keyword" element={<ManualKeywordPage />} />
-                <Route path="/articles/bulk-keyword" element={<BulkKeywordPage />} />
-                <Route path="/articles/longtail-keyword" element={<LongtailKeywordPage />} />
-                <Route path="/articles/settings" element={<ArticleSettingsPage />} />
-              </Routes>
+            <main className="flex-1 w-full p-6 overflow-auto">
+              <div className="max-w-[1600px] mx-auto">
+                <Routes>
+                  <Route path="/" element={<ArticlesPage />} />
+                  <Route path="/auto-blog" element={<AutoBlogPage />} />
+                  <Route path="/internal-links" element={<InternalLinksPage />} />
+                  <Route path="/free-backlinks" element={<FreeBacklinksPage />} />
+                  <Route path="/integrations" element={<IntegrationsPage />} />
+                  <Route path="/subscription" element={<SubscriptionPage />} />
+                  <Route path="/affiliate-program" element={<AffiliateProgramPage />} />
+                  <Route path="/help-center" element={<HelpCenterPage />} />
+                  <Route path="/updates" element={<UpdatesPage />} />
+                  <Route path="/live-chat-support" element={<LiveChatSupportPage />} />
+                  <Route path="/profile" element={<ProfilePage />} />
+                  {/* Article subpages */}
+                  <Route path="/articles/create" element={<CreateArticlePage />} />
+                  <Route path="/articles/generated" element={<ArticlesPage />} />
+                  <Route path="/articles/keyword-projects" element={<KeywordProjectsPage />} />
+                  <Route path="/articles/ai-keyword" element={<AIKeywordPage />} />
+                  <Route path="/articles/steal-competitor" element={<StealCompetitorPage />} />
+                  <Route path="/articles/import-gsc" element={<ImportGSCPage />} />
+                  <Route path="/articles/manual-keyword" element={<ManualKeywordPage />} />
+                  <Route path="/articles/bulk-keyword" element={<BulkKeywordPage />} />
+                  <Route path="/articles/longtail-keyword" element={<LongtailKeywordPage />} />
+                  <Route path="/articles/settings" element={<ArticleSettingsPage />} />
+                </Routes>
+              </div>
             </main>
           </div>
         </div>
